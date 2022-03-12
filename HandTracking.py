@@ -26,11 +26,6 @@ mpDraw=mp.solutions.drawing_utils
 pTime=0
 cTime=0
 
-b=rd.randrange(0,255,1)
-g=rd.randrange(0,255,1)
-r=rd.randrange(0,255,1)
-
-
 while True:
     success,img=cap.read()
     img=cv.flip(img,1)
@@ -78,7 +73,7 @@ while True:
                 #determining the coordinates of the landmarks and multiplying them with the size of the image
                 x,y=int(lm.x*iw),int(lm.y*ih)
                 
-                cv.putText(img,f'{id}',(x,y),cv.FONT_ITALIC,0.4,(b,g,r),2)
+                cv.putText(img,f'{id}',(x,y),cv.FONT_ITALIC,0.4,(0,0,0),2)
 
 
 
